@@ -1,7 +1,8 @@
 import React from 'react';
 import RulesListDisplay from "./RulesListDisplay/RulesListDisplay";
+import RuleAdder from "./RuleAdder/RuleAdder";
 
-const rules = [
+const initialRules = [
   "1st RULE: You do not talk about FIGHT CLUB.",
   "2nd RULE: You DO NOT talk about FIGHT CLUB.",
   "3rd RULE: If someone says \"stop\" or goes limp, taps out the fight is over.",
@@ -14,13 +15,28 @@ const rules = [
 
 export default class RulesListContainer extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.addRule = this.addRule.bind(this);
+  }
+
   componentWillMount() {
+    this.setState({rules: initialRules});
+  }
+
+  addRule(rule) {
+    let rules = this.state.rules;
+    rules.push(rule);
+    console.log('New rule is: '+rule);
     this.setState({rules: rules});
   }
 
   render() {
     return (
-        <RulesListDisplay rules={this.state.rules}/>
+        <div>
+          <RulesListDisplay rules={this.state.rules}/>
+          <RuleAdder addRule={this.addRule}/>
+        </div>
     )
   }
 }

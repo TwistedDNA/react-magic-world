@@ -5,7 +5,6 @@ export default class RulesListDisplay extends React.Component{
     const items = this.props.rules.map((rule)=>
     <li>{rule}</li>
     );
-
     return (<ul> {items} </ul>);
   }
 }
