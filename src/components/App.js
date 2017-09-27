@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import RulesListContainer from "./components/RulesListContainer/RulesListContainer";
+import RulesListContainer from "./RulesListContainer/RulesListContainer";
 
 class App extends Component {
   render() {
