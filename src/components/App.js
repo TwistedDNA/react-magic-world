@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import RulesListContainer from "./RulesListContainer/RulesListContainer";
+require('../styles/baseline.css');
 
 class App extends Component {
   render() {

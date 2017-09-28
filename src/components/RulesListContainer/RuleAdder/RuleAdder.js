@@ -1,6 +1,9 @@
 import React from 'react';
+import {addRule} from "../../../actions/index";
+import bindActionCreators from "redux/es/bindActionCreators";
+import {connect} from "react-redux";
 
-export default class RuleAdder extends React.Component {
+class RuleAdder extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
@@ -13,15 +16,21 @@ export default class RuleAdder extends React.Component {
   }
 
   handleChange(e) {
-    this.setState({value:e.target.value});
+    this.setState({value: e.target.value});
   }
 
   render() {
     return (
         <div>
           <input onChange={this.handleChange}/>
-          <button type="submit" onClick={this.handleClick}> Add rule</button>
+          <button type="submit" onClick={this.props.addRule}> Add rule</button>
         </div>
     )
   }
 }
+
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators({addRule: addRule}, dispatch);
+}
+
+export default connect(matchDispatchToProps)(RuleAdder);
