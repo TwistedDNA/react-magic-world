@@ -1,36 +1,33 @@
 import React from 'react';
-import {addRule} from "../../../actions/index";
-import bindActionCreators from "redux/es/bindActionCreators";
 import {connect} from "react-redux";
+import {RULE_ADDED, RULE_TEXT_UPDATED} from "../../../constants/actionTypes";
 
 class RuleAdder extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+constructor(props){
+  super(props);
+  this.updateValue = ev => {
+    console.log(ev.target.value);
+    this.props.onChangeUpdateState(ev.target.value);
+  };
+  this.addRule = () => {
+    console.log('addingRule');
+    this.props.onClickAddRule();
   }
-
-  handleClick(e) {
-    console.log('handling click');
-    this.props.addRule(this.state.value);
-  }
-
-  handleChange(e) {
-    this.setState({value: e.target.value});
-  }
+}
 
   render() {
     return (
         <div>
-          <input onChange={this.handleChange}/>
-          <button type="submit" onClick={this.props.addRule}> Add rule</button>
+          <input onChange={this.updateValue}/>
+          <button type="submit" onClick={this.addRule}>Add rule</button>
         </div>
     )
   }
 }
 
-function matchDispatchToProps(dispatch) {
-  return bindActionCreators({addRule: addRule}, dispatch);
-}
+const mapDispatchToProps = dispatch => ({
+  onClickAddRule: () => dispatch({type: RULE_ADDED}),
+  onChangeUpdateState: (v) => dispatch({type: RULE_TEXT_UPDATED, v})
+});
 
-export default connect(matchDispatchToProps)(RuleAdder);
+export default connect(null ,mapDispatchToProps)(RuleAdder);

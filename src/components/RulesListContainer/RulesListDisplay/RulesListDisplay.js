@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 class RulesListDisplay extends React.Component {
   render() {
     const items = this.props.rules.map((rule) =>
-        <li>{rule}</li>
+        <li key={rule}>{rule}</li>
     );
     return (<ul> {items} </ul>);
   }
