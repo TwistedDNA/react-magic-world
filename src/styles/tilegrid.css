@@ -1,0 +1,13 @@
+.tile-grid {
+    display: flex;
+}
+
+.tile {
+    margin: auto;  /* Magic! */
+}
+.tile-header {
+    background-color: darkgoldenrod;
+}
+.tile-body {
+    background-color: bisque;
+}

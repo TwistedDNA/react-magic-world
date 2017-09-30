@@ -1,6 +1,8 @@
 import {combineReducers} from 'redux';
-import rulesReducer from './reducers/rules';
+import tiles from "./reducers/tiles";
+import rules from "./reducers/rules";
 
 export default combineReducers({
-    rulesReducer:rulesReducer
+    rulesReducer:rules,
+    tilesReducer:tiles
 });

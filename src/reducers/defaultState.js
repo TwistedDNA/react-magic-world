@@ -12,6 +12,22 @@ export default function () {
                 "8th RULE: If this is your first night at FIGHT CLUB, you HAVE to fight."
             ],
             ruleText:''
+        },
+        tilesReducer: {
+            tiles: [
+                {
+                    header: "Facebook",
+                    body: "https://www.facebook.com/"
+                },
+                {
+                    header: "VK",
+                    body: "https://www.vk.com/"
+                },
+                {
+                    header: "Twitter",
+                    body: "https://twitter.com"
+                }
+            ]
         }
     }
 };
