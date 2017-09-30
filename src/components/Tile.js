@@ -10,7 +10,7 @@ class Tile extends React.Component{
                     {this.props.header}
                 </div>
                 <div className="tile-body">
-                    {this.props.body}
+                    <a href={this.props.body}> {this.props.body} </a>
                 </div>
             </div>
         )
