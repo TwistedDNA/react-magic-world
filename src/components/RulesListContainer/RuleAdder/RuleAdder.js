@@ -6,11 +6,9 @@ class RuleAdder extends React.Component {
 constructor(props){
   super(props);
   this.updateValue = ev => {
-    console.log(ev.target.value);
     this.props.onChangeUpdateState(ev.target.value);
   };
   this.addRule = () => {
-    console.log('addingRule');
     this.props.onClickAddRule();
   }
 }
@@ -18,11 +16,14 @@ constructor(props){
   render() {
     return (
         <div>
-          <input onChange={this.updateValue}/>
+          <input value={this.props.ruleText} onChange={this.updateValue}/>
           <button type="submit" onClick={this.addRule}>Add rule</button>
         </div>
     )
   }
+}
+function mapStateToProps(state) {
+    return state.rulesReducer;
 }
 
 const mapDispatchToProps = dispatch => ({
@@ -30,4 +31,4 @@ const mapDispatchToProps = dispatch => ({
   onChangeUpdateState: (value) => dispatch({type: RULE_TEXT_UPDATED, value})
 });
 
-export default connect(null ,mapDispatchToProps)(RuleAdder);
+export default connect(mapStateToProps ,mapDispatchToProps)(RuleAdder);

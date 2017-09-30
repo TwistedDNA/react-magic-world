@@ -10,7 +10,8 @@ export default function () {
                 "6th RULE: No shirts, no shoes.",
                 "7th RULE: Fights will go on as long as they have to.",
                 "8th RULE: If this is your first night at FIGHT CLUB, you HAVE to fight."
-            ]
+            ],
+            ruleText:''
         }
     }
 };

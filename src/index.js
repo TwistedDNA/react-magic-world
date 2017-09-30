@@ -10,7 +10,6 @@ import allReducers from './reducers';
 import defaultState from "./reducers/defaultState";
 
 const store = createStore(allReducers,defaultState());
-console.log(store.getState());
 ReactDOM.render(
     <Provider store={store}>
       <App/>

@@ -1,24 +1,17 @@
 import {RULE_ADDED, RULE_TEXT_UPDATED} from "../constants/actionTypes";
-const defaultState = {rules:[]};
+const defaultState = {rules:[],ruleText:''};
 export default function (state=defaultState, action) {
-    console.log('I am reducer. My state is: ');
-    console.log(state);
     switch (action.type) {
         case RULE_ADDED:
-            state.rules.push(action.ruleText ? action.ruleText : '');
-            console.log('on RULE_ADDED gona return:');
-            console.log({
-                ...state,
-                rules: [...state.rules]
-            });
+            let newRules = state.rules;
+            newRules.push(state.ruleText ? state.ruleText : '');
             return {
                 ...state,
-                rules: [...state.rules]
+                rules: newRules,
+                ruleText:''
             };
         case RULE_TEXT_UPDATED:
-            console.log('value updates with action: ');
-            console.log(action);
-            return {...state, ruleText: action.payload};
+            return {...state, ruleText: action.value};
         default:
     }
     return state;

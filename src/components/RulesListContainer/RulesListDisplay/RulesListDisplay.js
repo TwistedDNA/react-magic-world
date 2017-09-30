@@ -11,8 +11,6 @@ class RulesListDisplay extends React.Component {
 }
 
 function mapStateToProps(state) {
-    console.log('RulesListDisplay stateToProps.state: ');
-    console.log(state);
   return state.rulesReducer;
 }
 
