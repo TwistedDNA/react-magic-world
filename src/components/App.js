@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import logo from '../resources/images/logo.svg';
 import '../styles/App.css';
 import '../styles/tilegrid.css';
-import TileGrid from "./TileGrid";
+import TileGrid from "./TilesGrid/TileGrid";
 
 class App extends Component {
   render() {

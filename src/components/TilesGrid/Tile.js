@@ -1,5 +1,5 @@
 import * as React from "react";
-import {TILE_CLICKED} from "../constants/actionTypes";
+import {TILE_CLICKED} from "../../constants/actionTypes";
 import {connect} from "react-redux";
 
 class Tile extends React.Component{
