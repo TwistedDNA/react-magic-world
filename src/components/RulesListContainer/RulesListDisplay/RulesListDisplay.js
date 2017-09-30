@@ -8,13 +8,12 @@ class RulesListDisplay extends React.Component {
     );
     return (<ul> {items} </ul>);
   }
-
 }
 
 function mapStateToProps(state) {
-  return {
-    rules: state.rules
-  };
+    console.log('RulesListDisplay stateToProps.state: ');
+    console.log(state);
+  return state.rulesReducer;
 }
 
 export default connect(mapStateToProps)(RulesListDisplay);

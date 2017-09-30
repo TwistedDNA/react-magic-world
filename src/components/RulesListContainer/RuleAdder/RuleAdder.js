@@ -27,7 +27,7 @@ constructor(props){
 
 const mapDispatchToProps = dispatch => ({
   onClickAddRule: () => dispatch({type: RULE_ADDED}),
-  onChangeUpdateState: (v) => dispatch({type: RULE_TEXT_UPDATED, v})
+  onChangeUpdateState: (value) => dispatch({type: RULE_TEXT_UPDATED, value})
 });
 
 export default connect(null ,mapDispatchToProps)(RuleAdder);
