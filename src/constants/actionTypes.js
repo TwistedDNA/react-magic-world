@@ -1,2 +1,3 @@
 export const RULE_ADDED='RULE_ADDED';
 export const RULE_TEXT_UPDATED='RULE_TEXT_UPDATED';
+export const TILE_CLICKED='TILE_CLICKED';

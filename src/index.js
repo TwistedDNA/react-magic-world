@@ -6,10 +6,10 @@ import App from './components/App';
 import {Provider} from 'react-redux';
 import registerServiceWorker from './components/registerServiceWorker';
 import {createStore} from 'redux';
-import {allReducers} from './reducers';
+import allReducers from './reducers';
+import defaultState from "./reducers/defaultState";
 
-const store = createStore(allReducers);
-
+const store = createStore(allReducers,defaultState());
 ReactDOM.render(
     <Provider store={store}>
       <App/>
