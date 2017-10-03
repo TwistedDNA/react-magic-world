@@ -1,6 +1,6 @@
 import * as React from "react";
-import TextAndValue from "./TextAndValue";
-import RepositoryDesc from "./RepositoryDesc";
+import TextAndValue from "./ValueAboveText/ValueAboveText";
+import RepositoryDesc from "./RepositoryDescription/RepositoryDescription";
 import styles from "./github-widget.scss"
 
 

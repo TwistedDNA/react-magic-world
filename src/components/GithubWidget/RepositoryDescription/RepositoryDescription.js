@@ -1,16 +1,16 @@
 import * as React from "react";
-import starIcon from "./star.svg"
-import styles from "./github-widget.scss"
+import starIcon from "../star.svg"
+import styles from "./RepositoryDescription.scss"
 
 export default class RepositoryDesc extends React.Component {
   render() {
     return (
-        <div className={styles.repositoryDesc}>
-          <h6>{this.props.name}</h6>
-          <h6>{this.props.language}</h6>
+        <div className={styles.container}>
+          <span>{this.props.name}</span>
+          <span>{this.props.language}</span>
           <div className={styles.starAndNumber}>
             <img alt="star" src={starIcon} className={styles.starIcon}/>
-            <h6 className={styles.starNumber}>{this.props.stars}</h6>
+            <span>{this.props.stars}</span>
           </div>
         </div>
     )

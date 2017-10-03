@@ -1,8 +1,4 @@
 .container {
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
   color: #333;
   border: 1px solid #DDD;
   max-width: 350px;
@@ -10,54 +6,22 @@
 
 .header {
   border-bottom: 1px solid #DDD;
-  .photoAndSummary {
-    display: flex;
-    align-items: center;
-  }
-
-  .avatar {
-    flex: 2;
-    max-width: 72px;
-    max-height: 72px;
-  }
-
-  .summary {
-  }
-
-  .headerBottom {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .textAndValue {
-    line-height: 20%;
-  }
 }
 
-.inline {
-  display: inline;
+.photoAndSummary {
+  display: flex;
+  align-items: center;
 }
 
-.body {
-  display: inline;
-
-  .repositories {
-    .repositoryDesc {
-      display: flex;
-      justify-content: space-around;
-    }
-
-    .starIcon {
-      max-height: 15px;
-      max-width: 15px;
-    }
-
-    .starAndNumber {
-      display: flex;
-      align-items: center;
-    }
-
-    .starNumber {
-    }
-  }
+.avatar {
+  flex: 2;
+  max-width: 72px;
+  max-height: 72px;
 }
+
+.headerBottom {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
