@@ -1,0 +1,53 @@
+.container {
+  align-items: center;
+  justify-content: center;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  color: #333;
+  border: 1px solid #DDD;
+  max-width: 350px;
+}
+
+.header {
+}
+
+.photoAndSummary {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  flex: 2;
+  max-width: 72px;
+  max-height: 72px;
+}
+
+.summary {
+
+}
+
+.headerBottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.textAndValue {
+  padding: 3px;
+}
+
+.repositoryDesc {
+  display: flex;
+  justify-content: flex-start;
+  .starIcon {
+    max-height: 15px;
+    max-width: 15px;
+  }
+  .starAndNumber {
+  display: flex;
+  align-items: center;
+  }
+}
+
+.body {
+
+}

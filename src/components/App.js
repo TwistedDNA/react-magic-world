@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import logo from '../resources/images/logo.svg';
-import '../styles/App.css';
-import '../styles/tilegrid.css';
+import '../styles/App.scss';
+import '../styles/tilegrid.scss';
 import TileGrid from "./TilesGrid/TileGrid";
 import GithubWidget from "./GithubWidget/GithubWidget";
 

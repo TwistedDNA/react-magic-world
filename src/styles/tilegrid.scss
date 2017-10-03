@@ -1,22 +1,25 @@
-.tile-grid {
+:global {
+  .tile-grid {
     display: flex;
     flex-wrap: wrap;
-}
+  }
 
-.tile {
-    margin: auto;  /* Magic! */
+  .tile {
+    margin: auto; /* Magic! */
     border-radius: 12px;
     background: forestgreen;
     padding: 20px;
     width: 200px;
     height: 150px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-.tile-header {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  .tile-header {
     background-color: darkgoldenrod;
-    width:100%;
-}
-.tile-body {
+    width: 100%;
+  }
+  .tile-body {
     background-color: bisque;
+  }
+
 }
 
