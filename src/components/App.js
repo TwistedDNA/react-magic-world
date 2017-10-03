@@ -3,8 +3,10 @@ import logo from '../resources/images/logo.svg';
 import '../styles/App.css';
 import '../styles/tilegrid.css';
 import TileGrid from "./TilesGrid/TileGrid";
+import GithubWidget from "./GithubWidget/GithubWidget";
 
 class App extends Component {
+
   render() {
     return (
         <div className="App">
@@ -13,7 +15,8 @@ class App extends Component {
             <h2>Welcome to React</h2>
           </div>
           <div className="App-intro">
-           <TileGrid />
+            <TileGrid/>
+            <GithubWidget/>
           </div>
         </div>
     );
