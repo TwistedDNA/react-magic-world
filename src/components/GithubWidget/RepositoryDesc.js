@@ -9,8 +9,8 @@ export default class RepositoryDesc extends React.Component {
           <h6>{this.props.name}</h6>
           <h6>{this.props.language}</h6>
           <div className={styles.starAndNumber}>
-            <img className={styles.starIcon} src={starIcon}/>
-            <h6>{this.props.stars}</h6>
+            <img alt="star" src={starIcon} className={styles.starIcon}/>
+            <h6 className={styles.starNumber}>{this.props.stars}</h6>
           </div>
         </div>
     )
