@@ -1,3 +1,5 @@
+@import "../colors.scss";
+
 .container {
   color: #333;
   border: 1px solid #DDD;
@@ -17,7 +19,7 @@
 .summary{
   padding: 0.3rem;
   font-size: 1rem;
-  color: #4078C0;
+  color: $bluish-text-color;
 }
 .location{
   font-size: 0.7rem;

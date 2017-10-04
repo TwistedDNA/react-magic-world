@@ -34,5 +34,6 @@ export default class GithubWidget extends React.Component {
           </div>
         </div>)
   }
+
 }
 
