@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import logo from '../resources/images/logo.svg';
-import '../styles/App.scss';
+import './App.scss';
 import './TilesGrid/tilegrid.scss';
 import GithubWidget from "./GithubWidget/GithubWidget";
 
