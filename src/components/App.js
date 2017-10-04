@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import logo from '../resources/images/logo.svg';
 import '../styles/App.scss';
 import '../styles/tilegrid.scss';
-import TileGrid from "./TilesGrid/TileGrid";
 import GithubWidget from "./GithubWidget/GithubWidget";
 
 class App extends Component {
@@ -15,7 +14,6 @@ class App extends Component {
             <h2>Welcome to React</h2>
           </div>
           <div className="App-intro">
-            <TileGrid/>
             <GithubWidget/>
           </div>
         </div>

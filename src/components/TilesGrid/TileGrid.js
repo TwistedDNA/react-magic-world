@@ -6,7 +6,7 @@ import Tile from "./Tile";
 class TileGrid extends React.Component {
     render() {
         const items = this.props.tiles.map((tile) =>
-            <Tile header={tile.header} body={tile.body}/>
+            <Tile key={tile.header} header={tile.header} body={tile.body}/>
         );
         return (
             <div className="tile-grid">

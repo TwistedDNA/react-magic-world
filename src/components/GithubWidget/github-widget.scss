@@ -1,11 +1,26 @@
 .container {
   color: #333;
   border: 1px solid #DDD;
-  max-width: 350px;
+  max-width: 22rem;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .header {
   border-bottom: 1px solid #DDD;
+  padding: .3rem;
+}
+.name{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.summary{
+  padding: 0.3rem;
+  font-size: 1rem;
+  color: #4078C0;
+}
+.location{
+  font-size: 0.7rem;
 }
 
 .photoAndSummary {
@@ -14,14 +29,19 @@
 }
 
 .avatar {
-  flex: 2;
-  max-width: 72px;
-  max-height: 72px;
+  max-width: 7rem;
+  max-height: 7rem;
 }
 
 .headerBottom {
   display: flex;
   justify-content: space-evenly;
+}
+.body{
+  padding: .7rem;
+}
+.topRepositoriesText{
+  line-height: 2.5rem;
 }
 
 

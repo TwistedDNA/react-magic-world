@@ -1,11 +1,28 @@
 .container {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 60% 25% 1fr;
+  line-height: 4rem;
+  align-items: center;
 }
 
+.name {
+  grid-column: 1;
+  color:#4078C0;
+  text-align: left;
+  font-size: 1rem;
+  line-height: normal;
+}
+.language{
+  grid-column: 2;
+  text-align: left;
+  font-size: 1rem;
+  }
+
 .starIcon {
-  max-height: 15px;
-  max-width: 15px;
+  grid-column: 3;
+  text-align: left;
+  max-height: 1.1rem;
+  max-width: 1.1rem;
 }
 
 .starAndNumber {
