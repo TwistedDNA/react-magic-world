@@ -28,6 +28,21 @@ export default function () {
                     body: "https://twitter.com"
                 }
             ]
+        },
+        githubWidgetReducer: {
+            user : {
+                name: 'John Doe',
+                summary: 'Unknown guy',
+                location: 'nowhere',
+                icon: 'https://maxcdn.icons8.com/Share/icon/color/Gaming//pokecoin1600.png'
+            },
+            repos : [
+                {
+                    name: 'single-repo',
+                    language: 'esperanto',
+                    stars:'-1'
+                }
+            ]
         }
     }
 };
