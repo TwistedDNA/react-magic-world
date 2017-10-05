@@ -30,13 +30,13 @@ export default function () {
             ]
         },
         githubWidgetReducer: {
-            user : {
+            ghUser : {
                 name: 'John Doe',
                 summary: 'Unknown guy',
                 location: 'nowhere',
                 icon: 'https://maxcdn.icons8.com/Share/icon/color/Gaming//pokecoin1600.png'
             },
-            repos : [
+            ghRepos : [
                 {
                     name: 'single-repo',
                     language: 'esperanto',

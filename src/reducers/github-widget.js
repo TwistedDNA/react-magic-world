@@ -1,26 +1,29 @@
-import {FETCH_GITHUB_DATA, REQUEST_GITHUB_DATA} from "../constants/actionTypes";
+import {GITHUB_FETCH_REPOSITORIES, GITHUB_FETCH_USER_DATA} from "../constants/actionTypes";
 
 export default function (state = {}, action){
     switch(action.type){
-        case REQUEST_GITHUB_DATA:
-            let url = "https://api.github.com/users/TwistedDNA/repos?per_page=1000";
-            fetch(url)
-                .then((res) => res.json())
-                .then((data) => console.log(data))
-                .catch((err) => console.log(err));
-            url = "https://api.github.com/users/TwistedDNA";
-            fetch(url)
-                .then((res) => res.json())
-                .then((data) => console.log(data))
-                .catch((err) => console.log(err));
-            break;
-        case FETCH_GITHUB_DATA:
+
+        case GITHUB_FETCH_USER_DATA:
             return {
                 ...state,
-                ghUser: action.payload.ghUser,
-                ghRepos: action.payload.ghRepos
+                ghUser: action.payload,
+            };
+        case GITHUB_FETCH_REPOSITORIES:
+            return{
+                ...state,
+                ghRepos: action.payload.sort(byStars).slice(0,3)
             };
         default:
     }
     return state;
 }
+
+const byStars = function(a,b){
+        if (a.stargazers_count === b.stargazers_count) {
+            return 0;
+        } else if (a.stargazers_count > b.stargazers_count) {
+            return -1;
+        } else {
+            return 1;
+        }
+};
